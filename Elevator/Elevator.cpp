@@ -8,7 +8,7 @@ TransitionTable transitions;
 Elevator::Elevator(int countFloors)
 {
     state = State_Stopped;
-    currentFloor = 3;
+    currentFloor = 1;
     this->countFloors = countFloors;
     fillTransitionTable();//Заполняем таблицу состояний при создании объекта "лифт"
 }
@@ -53,7 +53,10 @@ void Elevator::fillTransitionTable()
  void Elevator::callFromFloor(int floor)
 {
     if(floor > this->countFloors || floor < 1)//проверка на корректность
+    {
+        cout << "incorrect floor" << endl;
         return;
+    }
     if(this->currentFloor > floor)
     {
         this->floorsForDownMoving.insert(floor);
@@ -80,7 +83,10 @@ void Elevator::fillTransitionTable()
 void Elevator::callFromCabin(int floor)
 {
     if(floor > this->countFloors || floor < 1)//проверка на корректность
+    {
+        cout << "incorrect floor" << endl;
         return;
+    }
     if(this->currentFloor > floor)
     {
         this->floorsForDownMoving.insert(floor);

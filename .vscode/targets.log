@@ -6,7 +6,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Feb 16 18:24:23 2022
+# Make data base, printed on Wed Feb 16 18:53:30 2022
 
 # Variables
 
@@ -213,7 +213,8 @@ VSCODE_PID = 4112
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-9JD9HMB
 # variable set hash-table stats:
-# Load=101/1024=10%, Rehash=0, Collisions=16/124=13%
+#  
+Load=101/1024=10%, Rehash=0, Collisions=16/124=13%
 
 # Pattern-specific Variable Values
 
@@ -221,9 +222,9 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-9JD9HMB
 
 # Directories
 
-# . (key d:/Documents/VSCode projects/GCC/Elevator, mtime 1645025049): 10 files, no impossibilities.
+# . (key d:/Documents/VSCode projects/GCC/Elevator, mtime 1645026733): 8 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -233,12 +234,11 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-9JD9HMB
 
 # Not a target:
 Elevator/Elevator.hpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-16 18:05:01
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-all: main.o Elevator/Elevator.o
+all: main.o Elevator.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -247,7 +247,7 @@ all: main.o Elevator/Elevator.o
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 #  recipe to execute (from 'Makefile', line 2):
-	g++ main.cpp Elevator/Elevator.cpp -o Elevator
+	g++ main.cpp Elevator/Elevator.cpp -o bin/Elevator
 
 # Not a target:
 .SUFFIXES:
@@ -258,41 +258,14 @@ all: main.o Elevator/Elevator.o
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-16 18:21:47
+#  Last modified 2022-02-16 18:50:20
 #  File has been updated.
 #  Successfully updated.
-
-Elevator/Elevator.o: Elevator/Elevator.cpp Elevator/Elevator.hpp
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := Elevator/Elevator.o
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := Elevator/Elevator.cpp Elevator/Elevator.hpp
-# automatic
-# | := 
-# automatic
-# < := Elevator/Elevator.cpp
-# automatic
-# ^ := Elevator/Elevator.cpp Elevator/Elevator.hpp
-# automatic
-# ? := Elevator/Elevator.cpp Elevator/Elevator.hpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  recipe to execute (from 'Makefile', line 8):
-	g++ -c Elevator/Elevator.cpp
 
 # Not a target:
 main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-16 18:06:34
+#  Last modified 2022-02-16 18:24:36
 #  File has been updated.
 #  Successfully updated.
 
@@ -304,18 +277,43 @@ main.cpp:
 
 main.o: main.cpp
 #  Implicit rule search has not been done.
-#  Last modified 2022-02-16 18:21:48
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := main.cpp
+# automatic
+# | := 
+# automatic
+# < := main.cpp
+# automatic
+# ^ := main.cpp
+# automatic
+# ? := main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
 #  recipe to execute (from 'Makefile', line 5):
-	g++ -c main.cpp
+	g++ -c main.cpp -o bin/main.o
 
 # Not a target:
 Elevator/Elevator.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-16 17:43:40
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Elevator.o: Elevator/Elevator.cpp Elevator/Elevator.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+	g++ -c Elevator/Elevator.cpp -o bin/Elevator.o
 
 # files hash-table stats:
 # Load=9/1024=1%, Rehash=0, Collisions=0/28=0%
@@ -325,12 +323,12 @@ Elevator/Elevator.cpp:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 163 B / avg = 10 B
-# current buf: size = 8162 B / used = 163 B / count = 16 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 134 B / avg = 8 B
+# current buf: size = 8162 B / used = 134 B / count = 15 / avg = 8 B
 
-# strcache performance: lookups = 28 / hit rate = 42%
+# strcache performance: lookups = 26 / hit rate = 42%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/28=4%
-# Finished Make data base on Wed Feb 16 18:24:23 2022
+# Load=15/8192=0%, Rehash=0, Collisions=1/26=4%
+# Finished Make data base on Wed Feb 16 18:53:30 2022
 
  

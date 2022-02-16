@@ -27,7 +27,7 @@ bool waintInput(int* targetFloor, bool* fromCabin)
 
     while ( ! _kbhit()) //Проверяем нажатие клавиши
     {
-        if (((clock () - start)/ CLOCKS_PER_SEC ) >= 2) //Проверяем, не истек ли таймаут
+        if (((clock () - start)/ CLOCKS_PER_SEC ) >= 1) //Проверяем, не истек ли таймаут
         {
             return false;
         }
@@ -62,7 +62,7 @@ int main(void) {
     } while (!correctCinChek());
  
     Elevator elevator(countFloors);
-    
+
     elevator.outState();
     bool stopped = true;
     while(1)
