@@ -1,0 +1,6 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory 'd:/Documents/VSCode projects/GCC/Elevator'
+g++ -c Elevator/Elevator.cpp
+g++ main.cpp Elevator/Elevator.cpp -o Elevator
+make.exe: Leaving directory 'd:/Documents/VSCode projects/GCC/Elevator'
+ 
