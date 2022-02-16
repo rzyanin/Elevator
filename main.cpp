@@ -4,7 +4,6 @@
 #include <conio.h>
 #include <windows.h>
 #include "Elevator/Elevator.hpp"
-#include <set>
 using namespace std;
 
 bool correctCinChek()
